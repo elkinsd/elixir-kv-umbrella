@@ -64,3 +64,30 @@ You can use mix to compile it, test it, and more:
 
 Run `mix help` for more commands.
 ```
+
+### Test all applications in umbrella project
+```
+$ mix test
+==> kv
+Compiled lib/kv.ex
+Compiled lib/kv/bucket/supervisor.ex
+Compiled lib/kv/bucket.ex
+Compiled lib/kv/supervisor.ex
+Compiled lib/kv/registry.ex
+Generated kv.app
+.......
+
+Finished in 0.1 seconds (0.1s on load, 0.00s on tests)
+7 tests, 0 failures
+
+Randomized with seed 993436
+==> kv_server
+Compiled lib/kv_server.ex
+Generated kv_server.app
+.
+
+Finished in 0.00 seconds
+1 test, 0 failures
+
+Randomized with seed 52177
+```
