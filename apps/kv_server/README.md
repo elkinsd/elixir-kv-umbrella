@@ -29,3 +29,14 @@ Interactive Elixir (1.1.0-dev) - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)> KVServer.accept(4040)
 Accepting connections on port 4040
 ```
+
+=======
+
+## Don't die on halts
+```
+$ mix run --no-halt
+```
+
+Otherwise during Task dev each client disconnect will crash entire application
+
+
