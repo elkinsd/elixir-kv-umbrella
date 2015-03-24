@@ -3,8 +3,11 @@ defmodule KVServerTest do
   doctest KVServer
 
   setup do
-    :application.stop(:kv)
-    :ok = :application.start(:kv)
+    Logger.remove_backend(:console)
+    Application.stop(:kv)
+    :ok = Application.start(:kv)
+    Logger.add_backend(:console, flush: true)
+    :ok
   end
 
   setup do
