@@ -91,3 +91,8 @@ Finished in 0.00 seconds
 
 Randomized with seed 52177
 ```
+
+=======
+
+At this point the pre-distributed application is "complete".
+
