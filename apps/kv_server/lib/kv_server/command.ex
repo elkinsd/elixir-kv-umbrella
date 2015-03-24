@@ -24,7 +24,6 @@ defmodule KVServer.Command do
 
       iex> KVServer.Command.parse "UNKNOWN shopping eggs\r\n"
       {:error, :unknown_command}
-
       iex> KVServer.Command.parse "GET shopping\r\n"
       {:error, :unknown_command}
 
@@ -37,5 +36,12 @@ defmodule KVServer.Command do
       ["DELETE", bucket, key] -> {:ok, {:delete, bucket, key}}
        _ -> {:error, :unknown_command}
     end
+  end
+
+  @doc """
+  Runs the given command.
+  """
+  def run(command) do
+    {:ok, "OK\r\n"}
   end
 end
